@@ -1,0 +1,87 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+    background-color: black;
+    overflow: hidden;
+    }
+
+.universo{
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    background-image: url(../img/galaxia.jpg);
+    top: 50%;
+    left: 50%;
+    margin: -150vw -150vw;
+    animation: supernova 120s infinite linear ;
+    
+    }
+
+.earth, .volume{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 20vw;
+    overflow: hidden;
+    position: absolute;
+    background-size: auto 100%;
+    top: 50%;
+    left: 60%;
+    margin: -8vw 0vw;
+    transform: rotateZ(45deg);
+    }
+
+.volume{
+
+    box-shadow: inset 5vw 0vw 10vw rgba(155,155,255,.5),
+                inset -20vw 0vw 12vw rgba(0,0,0,.8),
+                .5vw 0vw 3vw rgba(55,155,255,.2),
+                -.5vw 0vw 3vw rgba(255,255,255,.5);
+              
+}
+
+.earth::before{
+    content: "";
+    position: absolute;
+    width: 300% ;
+    height: 100% ;
+    background-image: url(../img/merkur.jpg) ;
+    background-size: auto 100% ;
+    will-change: transform ;
+    animation: rotation 30s infinite linear ;
+    }
+
+.earth::after{
+    content: "" ;
+    position: absolute ;
+    width: 300% ;
+    height: 100% ;
+    background-image:url(../img/clouds.png); ;
+    background-size: auto 100% ;
+    will-change: transform ;
+    animation: rotation 35s infinite linear ;
+    }
+
+@keyframes rotation {
+
+    100% {
+        transform: translateX(-66.66%);
+    }
+
+}
+@keyframes supernova {
+
+    100% {
+        transform: rotateZ(360deg);
+        transform-origin: 50% 50%;   
+    }
+
+}
+
+
+
+
+
+
+
+
+
